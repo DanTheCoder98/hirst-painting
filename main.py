@@ -12,15 +12,18 @@ screen.colormode(255)
 
 direction = [0, 90, 180, 270]
 
+def random_colour():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+
+    return (r, g, b)
+
 def random_walk(lines):
     for _ in range(lines):
         tim.forward(20)
         tim.setheading(random.choice(direction))
-
-        r = random.randint(0, 255)
-        g = random.randint(0, 255)
-        b = random.randint(0, 255)
-        tim.pencolor(r, g, b)
+        tim.pencolor(random_colour())
 
 random_walk(200)
 
