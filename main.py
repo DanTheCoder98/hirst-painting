@@ -1,11 +1,14 @@
 import colorgram
 
-image_colours = colorgram.extract("image.jpg", 1000)
+colours = colorgram.extract("image.jpg", 50)
 
 colour_palette = []
 
-for n in range(len(image_colours)):
-    rgb_colours = image_colours[n].rgb.r, image_colours[n].rgb.g, image_colours[n].rgb.b
-    colour_palette.append(rgb_colours)
+for colour in colours:
+    r = colour.rgb.r
+    g = colour.rgb.g
+    b = colour.rgb.b
+
+    colour_palette.append((r, g, b))
 
 print(colour_palette)
