@@ -1,4 +1,6 @@
 import colorgram
+import turtle
+import random
 
 colours = colorgram.extract("image.jpg", 50)
 
@@ -11,4 +13,13 @@ for colour in colours:
 
     colour_palette.append((r, g, b))
 
-print(colour_palette)
+turtle.colormode(255)
+screen = turtle.Screen()
+screen.title("Hirst Painting")
+screen.bgcolor("white")
+
+tim = turtle.Turtle()
+tim.color("green4")
+tim.shape("turtle")
+
+screen.exitonclick()
