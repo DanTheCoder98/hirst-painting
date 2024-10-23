@@ -16,10 +16,12 @@ def random_colour():
 
     return (r, g, b)
 
-for _ in range(72):
-    tim.circle(100)
-    tim.left(5)
+def draw_spirograph(size_of_gap):
+    for _ in range(int(360 / size_of_gap)):
+        tim.pencolor(random_colour())
+        tim.circle(100)
+        tim.setheading(tim.heading() + size_of_gap)
 
-    tim.pencolor(random_colour())
+draw_spirograph(40)
 
 screen.exitonclick()
