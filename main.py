@@ -4,20 +4,14 @@ tim = turtle.Turtle()
 tim.shape("turtle")
 tim.color("green4")
 
-def draw_polygon(sides):
-    angle = 360 / sides
-    for _ in range(sides):
+def draw_shape(num_of_sides):
+    angle = 360 / num_of_sides
+    for _ in range(num_of_sides):
         tim.forward(100)
         tim.right(angle)
 
-draw_polygon(3)   # Triangle
-draw_polygon(4)   # Square
-draw_polygon(5)   # Pentagon
-draw_polygon(6)   # Hexagon
-draw_polygon(7)   # Heptagon
-draw_polygon(8)   # Octagon
-draw_polygon(9)   # Nonagon
-draw_polygon(10)  # Decagon
+for shape_side_n in range(3, 11):
+    draw_shape(shape_side_n)
 
 screen = turtle.Screen()
 screen.exitonclick()
